@@ -1,0 +1,53 @@
+.contact {
+    padding: 0 50px;
+
+    &__image {
+        padding: 30px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    &__avatar {
+        margin-right: 26px;
+        width: 228px;
+        height: 146px;
+    }
+
+    .form {
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 290px 290px;
+        grid-gap: 20px 43px;
+        padding-bottom: 40px;
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+
+            & label {
+                font-size: 16px;
+                line-height: 18px;
+                color: rgba(33, 33, 33, 0.75);
+                margin-bottom: 3px;
+            }
+
+            & input {
+                padding: 10px 8px;
+
+                &::placeholder {
+                    color: rgba(33, 33, 33, 0.75);
+                }
+            }
+        }
+
+        &__btn {
+            background: #212121;
+            border-radius: 2px;
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+            margin-top: 18px;
+        }
+    }
+}

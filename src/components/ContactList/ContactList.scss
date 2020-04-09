@@ -1,0 +1,98 @@
+.list {
+    padding: 47px 140px;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+
+        & input {
+            border: 1px solid rgba(33, 33, 33, 0.35);
+            border-radius: 2px;
+            padding: 10px 16px;
+            width: 550px;
+
+            &::placeholder {
+                font-size: 16px;
+                line-height: 18px;
+                color: rgba(33, 33, 33, 0.5);
+            }
+        }
+    }
+
+    &__svg {
+
+        &-sort {
+            margin: 0 16px;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 12px 0;
+    }
+
+    &__item {
+        width: 250px;
+        box-shadow: 1px 1px 3px rgba(33, 33, 33, 0.25);
+        border-radius: 4px;
+        margin: 20px 0;
+        
+        &-wrapper {
+            display: flex;
+            flex-direction: column;
+            padding: 0 8px;
+            margin-top: 10px;
+
+            button {
+                background: #212121;
+                border-radius: 2px;
+                font-size: 14px;
+                line-height: 16px;
+                color: #FFFFFF;
+                padding: 3px 31px;
+                align-self: flex-end;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-image {
+            width: 100%;
+            height: auto;
+        }
+
+        &-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 21px;
+                color: #000000;
+            }
+        }
+
+        &-content {
+            margin: 10px 0;
+
+            &-item {
+                display: flex;
+                align-items: center;
+                margin: 5px 0;
+
+                img {
+                    margin-right: 7px;
+                }
+
+                span {
+                    font-size: 13px;
+                    line-height: 15px;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
