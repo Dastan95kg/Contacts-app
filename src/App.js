@@ -10,8 +10,8 @@ const App = () => {
     <div className="App">
       <Header />
       <Switch>
-        <Route path="/new" component={ContactForm} />
-        <Route exact path="/" component={ContactList} />
+        <Route path="/new" render={() => <ContactForm />} />
+        <Route exact path="/" render={() => <ContactList />} />
       </Switch>
     </div>
   );

@@ -1,15 +1,29 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { FIND_CONTACT } from '../../actions/types';
 
-const ListHeader = () => {
+const ListHeader = ({ setInputValue, value, findContact }) => {
+    const dispatch = useDispatch();
+    const contacts = useSelector(state => state.contacts.contacts);
+
+    const onInputChange = (e) => {
+        setInputValue(e.target.value);
+        const filteredList = contacts.filter(item => {
+            let value = e.target.value.toLowerCase();
+            return item.firstName.toLowerCase().includes(value) || item.lastName.toLowerCase().includes(value);
+        })
+        dispatch({ type: FIND_CONTACT, payload: filteredList });
+    };
+
     return (
         <div className="list__header">
-            <input type="text" placeholder="type to search..." />
+            <input value={value} onChange={onInputChange} type="text" placeholder="type to search..." />
             <div className="list__svg">
                 <svg width="40" height="36.8" viewBox="0 0 70 66" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M35 65.2L30.1 60.3C11.9 44.2 0 33.35 0 20.05C0 9.19996 8.4 0.799957 19.25 0.799957C25.2 0.799957 31.15 3.59996 35 8.14996C38.85 3.59996 44.8 0.799957 50.75 0.799957C61.6 0.799957 70 9.19996 70 20.05C70 33.35 58.1 44.2 39.9 60.3L35 65.2Z" fill="#D32F2F" />
                 </svg>
                 <svg className="list__svg-sort" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
+                    <g clipPath="url(#clip0)">
                         <path d="M39.3332 40H0.666809C0.298767 40 0 39.7021 0 39.3332V0.666809C0 0.297852 0.298767 0 0.666809 0H39.3332C39.7012 0 40 0.297852 40 0.666809V39.3332C40 39.7021 39.7012 40 39.3332 40ZM1.33331 38.6667H38.6667V1.33331H1.33331V38.6667Z" fill="#D32F2F" />
                         <path d="M28.6667 33.3335C28.2986 33.3335 27.9999 33.0353 27.9999 32.6667V6.6666C27.9999 6.29794 28.2986 6.00009 28.6667 6.00009C29.0347 6.00009 29.3332 6.29794 29.3332 6.6666V32.6667C29.3332 33.0353 29.0347 33.3335 28.6667 33.3335Z" fill="#D32F2F" />
                         <path d="M28.6667 33.3334C28.4961 33.3334 28.3252 33.2681 28.1952 33.1381L22.862 27.8045C22.6013 27.5439 22.6013 27.1228 22.862 26.8618C23.122 26.6012 23.5446 26.6012 23.8047 26.8618L29.1379 32.1954C29.3988 32.4561 29.3988 32.8772 29.1379 33.1381C29.0079 33.2681 28.8373 33.3334 28.6667 33.3334Z" fill="#D32F2F" />
@@ -28,7 +42,7 @@ const ListHeader = () => {
                     </defs>
                 </svg>
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#clip0)">
+                    <g clipPath="url(#clip0)">
                         <path d="M7.33279 33.3334C7.23269 33.3334 7.13076 33.3106 7.03463 33.2633C6.70535 33.0988 6.57198 32.6981 6.73678 32.3688L12.07 21.702C12.2348 21.3727 12.6352 21.2405 12.9648 21.4041C13.2941 21.5686 13.4275 21.9693 13.2627 22.2986L7.92941 32.9654C7.81283 33.1986 7.57723 33.3334 7.33279 33.3334Z" fill="#212121" />
                         <path d="M18.0008 33.3334C17.756 33.3334 17.5208 33.1985 17.4039 32.9648L12.0706 22.298C11.9061 21.9687 12.0392 21.568 12.3688 21.4032C12.6975 21.2393 13.0981 21.3721 13.2632 21.7013L18.5968 32.3678C18.7613 32.6974 18.6279 33.0981 18.2986 33.2626C18.2025 33.3105 18.1006 33.3334 18.0008 33.3334Z" fill="#212121" />
                         <path d="M17.3334 29.3332H7.99988C7.63214 29.3332 7.33337 29.0353 7.33337 28.6667C7.33337 28.298 7.63214 27.9999 7.99988 27.9999H17.3334C17.7014 27.9999 17.9999 28.298 17.9999 28.6667C17.9999 29.0353 17.7014 29.3332 17.3334 29.3332Z" fill="#212121" />

@@ -3,9 +3,7 @@ import Contact from './Contact';
 
 const ContactForm = () => {
     return (
-        <div>
-            <Contact />
-        </div>
+        <Contact />
     );
 }
 
