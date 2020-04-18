@@ -2,6 +2,7 @@ import React from 'react';
 import ItemHeader from './ItemHeader';
 import ItemInfo from './ItemInfo';
 import ava from '../../../assets/item-ava.png';
+import { Link } from 'react-router-dom';
 
 const Item = ({ contact }) => {
 
@@ -12,6 +13,8 @@ const Item = ({ contact }) => {
                 <ItemHeader
                     firstName={contact.firstName}
                     lastName={contact.lastName}
+                    id={contact.id}
+                    favorite={contact.favorite}
                 />
                 <div className="list__item-content">
                     <ItemInfo
@@ -22,7 +25,7 @@ const Item = ({ contact }) => {
                     <ItemInfo site={contact.website} />
                     <ItemInfo email={contact.email} />
                 </div>
-                <button type="button">show</button>
+                <Link to={'/contact/' + contact.id}>show</Link>
             </div>
         </div>
     );

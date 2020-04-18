@@ -38,14 +38,14 @@
         box-shadow: 1px 1px 3px rgba(33, 33, 33, 0.25);
         border-radius: 4px;
         margin: 20px 0;
-        
+
         &-wrapper {
             display: flex;
             flex-direction: column;
             padding: 0 8px;
             margin-top: 10px;
 
-            button {
+            a {
                 background: #212121;
                 border-radius: 2px;
                 font-size: 14px;
@@ -54,6 +54,7 @@
                 padding: 3px 31px;
                 align-self: flex-end;
                 margin-bottom: 10px;
+                text-decoration: none;
             }
         }
 
@@ -72,6 +73,29 @@
                 font-weight: 500;
                 line-height: 21px;
                 color: #000000;
+            }
+
+            .checkbox {
+                input {
+                    display: none;
+                }
+
+                label {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                input:checked+label {
+                    
+                    svg {
+                        
+                        path {
+                            fill: red;
+                            opacity: 1;
+                        }
+                    }
+                }
             }
         }
 
