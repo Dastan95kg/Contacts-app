@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Contacts-app/static/css/main.84da188b.chunk.css",
+    "main.js": "/Contacts-app/static/js/main.6e80ae07.chunk.js",
+    "main.js.map": "/Contacts-app/static/js/main.6e80ae07.chunk.js.map",
+    "runtime-main.js": "/Contacts-app/static/js/runtime-main.b969ba7b.js",
+    "runtime-main.js.map": "/Contacts-app/static/js/runtime-main.b969ba7b.js.map",
+    "static/js/2.dba9fd64.chunk.js": "/Contacts-app/static/js/2.dba9fd64.chunk.js",
+    "static/js/2.dba9fd64.chunk.js.map": "/Contacts-app/static/js/2.dba9fd64.chunk.js.map",
+    "index.html": "/Contacts-app/index.html",
+    "precache-manifest.dce8b66cc53955e46e9a65f5d00de2de.js": "/Contacts-app/precache-manifest.dce8b66cc53955e46e9a65f5d00de2de.js",
+    "service-worker.js": "/Contacts-app/service-worker.js",
+    "static/css/main.84da188b.chunk.css.map": "/Contacts-app/static/css/main.84da188b.chunk.css.map",
+    "static/js/2.dba9fd64.chunk.js.LICENSE.txt": "/Contacts-app/static/js/2.dba9fd64.chunk.js.LICENSE.txt",
+    "static/media/avatar.png": "/Contacts-app/static/media/avatar.c51ab98f.png",
+    "static/media/item-ava.png": "/Contacts-app/static/media/item-ava.6448ca1d.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.b969ba7b.js",
+    "static/js/2.dba9fd64.chunk.js",
+    "static/css/main.84da188b.chunk.css",
+    "static/js/main.6e80ae07.chunk.js"
+  ]
+}
